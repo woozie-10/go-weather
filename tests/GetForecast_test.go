@@ -6,9 +6,9 @@ import (
 	"github.com/woozie-10/go-weather/weather"
 )
 
-func TestGetCurrent(t *testing.T) {
+func TestGetForecast(t *testing.T) {
 	client := weather.NewWeatherClient("test_api_key")
-	res, err := client.GetCurrent("London")
+	res, err := client.GetForecast("London", 5)
 	if err != nil {
 		t.Errorf("ERROR: %v", err)
 	}
@@ -16,4 +16,5 @@ func TestGetCurrent(t *testing.T) {
 		t.Error("ERROR: the result does not match")
 	}
 	t.Log("Test completed successfully")
+
 }
