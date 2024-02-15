@@ -1,3 +1,14 @@
+# Go Weather API Wrapper
+
+This is a Go package that provides a wrapper for interacting with the [Weather API](https://www.weatherapi.com/).
+
+## Installation
+You can install the package using `go get`:
+```bash
+go get github.com/woozie-10/go-weather
+```
+## Usage
+```go
 package main
 
 import (
@@ -28,3 +39,13 @@ func main() {
 	fmt.Println(forecast.Forecast.Forecastday[1].Day.Condition.Text) // "Patchy rain nearby"
 	fmt.Println(forecast.Forecast.Forecastday[2].Day.MaxwindKph)     // 19.8
 }
+```
+## Testing
+You can run tests using the `go test` command:
+```bash
+go test ./tests
+```
+## Contributing
+If you have suggestions to improve this project, please open a new issue or pull request.
+
+**Note:** Replace "YOUR_API_KEY" with your actual Weather API key.
