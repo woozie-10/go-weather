@@ -12,7 +12,7 @@ func NewWeatherClient(apiKey string) *WeatherClient {
 	}
 }
 func (wc *WeatherClient) GetCurrent(city string) (CurrentWeather, error) {
-	requestURL := fmt.Sprintf("http://api.weatherapi.com/v1/current.json?key=%s&q=%s", wc.API_KEY, city)
+	requestURL := fmt.Sprintf("https://api.weatherapi.com/v1/current.json?key=%s&q=%s", wc.API_KEY, city)
 	res, err := http.Get(requestURL)
 	if err != nil {
 		return CurrentWeather{}, err
